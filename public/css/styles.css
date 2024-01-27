@@ -1,6 +1,200 @@
 /******* Change Box Model ***************/
 *,
 *:before,
-*:after {
+* {
   box-sizing: border-box;
+}
+
+/*total page CSS*/
+html {
+  background: url(../images/site/checkerboard.jpg);
+  background-size: auto;
+}
+/*header CSS*/
+.siteName {
+  color:black;
+  font-size: 40px;
+}
+header {
+  font-family: 'Lucida Console', sans-serif;
+}
+h1 {
+  font-family: verdana, sans-serif;
+  color: black;
+  font-size: 50px;
+}
+.flex-contain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/*Car Details CSS*/
+.carDetails {
+  color: rgb(13, 48, 48);
+  padding: 20px;
+  background: gray, 0.5;
+  background-size:contain;
+  background-clip: padding-box;
+  width: 50%;
+  margin: 40px;
+}
+.details {
+  list-style-type: none;
+}
+button {
+  background-color: rgb(13, 48, 48); /* Blue */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+/*body CSS*/
+body {
+  border: 5px solid blue;
+  padding: 15px; 
+  background-size: auto;
+  background: white;
+  background-clip: padding-box;
+  border-radius: 25px;
+  margin: 20px 45px 20px 45px;
+} 
+#section1 {
+  background: url("../images/vehicles/delorean.jpg") center no-repeat;
+  background-size: 25%;
+}
+
+#section2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+/*section 2 CSS*/
+.addons {
+  padding: 10px;
+  flex: 50%;
+}
+
+#reviews {
+  padding: 10px;
+  flex: 50%;
+}
+
+#tools {
+  font: size 20px;
+  color: black;
+  text-align: right;
+}
+
+div.extras {
+  margin: 5px;
+  border: 1px solid #2c9fc5;
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+div.extras:hover {
+  border: 2px solid black;
+}
+
+.center {
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+div.bumpCaps {
+  margin: 5px;
+  border: 1px solid #2c9fc5;
+  float: left;
+  width: auto;
+  height: auto;
+}
+
+div.bumpCaps:hover {
+  border: 2px solid black;
+}
+/*responsive CSS*/
+/* .responsive {
+  padding: 0 6px;
+  float: left;
+  width: 49.9999%;
+} */
+/*navigation bar CSS*/
+nav {
+  background-color: black;
+  color: white;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li:first-child {
+  display: block;
+}
+
+nav ul li {
+  display: none;
+  list-style: none;
+  margin: 10px;
+}
+
+nav ul li a {
+  color: white;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  background-color: #efefef;
+  color: black;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
+.open li {
+  display: block;
+}
+/*different screen page view*/
+@media only screen and (min-width: 32.5em) {
+  nav ul {
+      flex-direction: row;
+  }
+  
+  nav ul li:first-child {
+      display: none;
+  }
+
+  nav ul li {
+      display: inline;
+      margin: 0 10px;
+  }
+  @media only screen and (max-width: 700px) {
+    .addons, #reviews {
+      flex: 100%;
+    }
+  }
+  
+  
 }
